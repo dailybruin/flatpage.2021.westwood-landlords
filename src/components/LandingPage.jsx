@@ -20,24 +20,40 @@ const BackgroundContainer = styled.div`
 `
 
 const TextContainer = styled.div`
-   font-family : "courier","sans-serif";
-   font-size : 21px;
+   font-family : "Cormorant";
+   font-size : 80px;
    text-align: center;
    align-self:center;
    color: white;
    padding-bottom: 0.7em;
-   border-bottom: solid white 2px;
    position: absolute;
-   top: 40%;
+   top: 45%;
    left: 50%;
    transform: translate(-50%, -40%);
+   line-height: 90px;
 `
+const Credits = styled.div`
+    font-family : "courier","Roboto";
+    font-size : 31px;
+    text-align: center;
+    align-self:center;
+    color: white;
+    padding-bottom: 0.7em;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+`
+
+
 
 export default function LandingPage(props) {
    return (
+       
       <LandingPageContainer>
          <BackgroundContainer />
-         <TextContainer>hello</TextContainer>
+         <TextContainer>Who Really Runs Westwood?</TextContainer>
+         <Credits>BY ZINNA FINN</Credits>
       </LandingPageContainer>
    )
 }

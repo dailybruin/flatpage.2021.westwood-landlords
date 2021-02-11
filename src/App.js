@@ -9,6 +9,10 @@ import CredsUnderLanding from './components/CredsUnderLanding'
 import LandingPage from './components/LandingPage'
 import SideBySideImage from './components/SideBySideImage'
 import CenteredImage from './components/CenteredImage'
+import Description from './components/Description'
+
+require('typeface-cormorant')
+require('typeface-karla')
 
 const Paragraph = styled.div`
   font-family: Merriweather;
@@ -104,6 +108,7 @@ function App() {
   return (
     <div className="App">
       <LandingPage title={data.landing_text}/>
+      <Description />
       
       {data.content &&
         data.content.map((block, index) => {
