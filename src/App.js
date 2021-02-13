@@ -15,11 +15,10 @@ require('typeface-cormorant')
 require('typeface-karla')
 
 const Paragraph = styled.div`
-  font-family: Merriweather;
+  font-family: Karla;
   font-weight: 300;
-  font-size: 20px;
-  color: #FFFFFF;
-  margin: 0 350px;
+  font-size: 21px;
+  margin: 0 300px;
   text-align: left;
   line-height: 32px;
   margin-bottom: 40px !important;
@@ -101,7 +100,7 @@ function App() {
   const  [ data, setData ] = useState({})
 
 	useEffect(() => {
-		fetch("https://kerckhoff.dailybruin.com/api/packages/flatpages/interactive.2020.tft/")
+		fetch("https://kerckhoff.dailybruin.com/api/packages/prime/prime.westwood-landlords/")
 		.then(res => res.json())
 		.then(res => setData(res.data['article.aml']))
   }, [])
@@ -112,9 +111,10 @@ function App() {
       
       {data.content &&
         data.content.map((block, index) => {
-          if (block.type === "paragraph") {
+          if (block.type == "paragraph") {
+            console.log(block.content)
             return (
-              <Paragraph key={index} className={index === 0 ? "subhead" : ""}>{block.content}</Paragraph>
+              <Paragraph >{block.content}</Paragraph>
             )
           } else if (block.type === "full-image") {
             return(
@@ -125,11 +125,7 @@ function App() {
           } else if (block.type == "centered-image") {
             <CenteredImage src={block.image_link} caption={block.image_credits} />
           }
-           else if (block.type === "subheader") {
-            return(
-              <Subheader key={index}>{block.content}</Subheader>
-            )
-          }  else {
+            else {
             return(<></>)
           }
         })
