@@ -11,6 +11,7 @@ import SideBySideImage from './components/SideBySideImage'
 import CenteredImage from './components/CenteredImage'
 import Description from './components/Description'
 import Banner from './components/Banner'
+import LeftImage from './components/LeftImage'
 
 require('typeface-cormorant')
 require('typeface-karla')
@@ -131,6 +132,11 @@ function App() {
             <CenteredImage src={block.image_link} caption={block.image_credits} />
             )
           }
+         else if (block.type == "left-image") {
+          return (
+          <LeftImage src={block.image_link} caption={block.image_credits} />
+          )
+        }
             else {
             return(<></>)
           }
