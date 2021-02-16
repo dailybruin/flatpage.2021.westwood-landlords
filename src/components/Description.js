@@ -6,7 +6,7 @@ const DescriptionText = styled.div`
     font-size : 33px;
     text-align: center;
     align-self:center;
-    color: white;
+    color: black;
     padding-bottom: 0.7em;
     position: absolute;
     top: 145%;
@@ -19,7 +19,7 @@ const DescriptionText = styled.div`
 
 const LandingPageContainer = styled.div`
    height:100vh;
-   background-color : black;
+   background-color : white;
    display: flex;
    justify-content: center;
 `
