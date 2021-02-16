@@ -114,7 +114,6 @@ function App() {
       {data.content &&
         data.content.map((block, index) => {
           if (block.type == "paragraph") {
-            console.log(block.content)
             return (
               <Paragraph >{block.content}</Paragraph>
             )
@@ -122,10 +121,15 @@ function App() {
             return(
               <FullImage src={block.image_link} caption={block.image_credits}/>
             )
-          } else if (block.type == "side-by-side-image") {
-            <SideBySideImage src={block.image_link} caption={block.image_credits} />
+          } else if (block.type == "side-by-side-images") {
+            console.log(block);
+            return (
+            <SideBySideImage src1={block.image_link1} src2={block.image_link2} caption={block.image_credits} />
+            )
           } else if (block.type == "centered-image") {
+            return (
             <CenteredImage src={block.image_link} caption={block.image_credits} />
+            )
           }
             else {
             return(<></>)

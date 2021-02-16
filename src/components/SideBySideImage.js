@@ -15,30 +15,58 @@ const Container = styled("div")`
     margin: 20px auto;
 `
 
-const Image = styled("img")`
-    display: block;
-    /* max-width:1400px;
-    max-height:1000px; */
-    width: auto;
-    justify-content:center;
+const ImageLeft = styled("img")`
+    margin-top:50px;
+    margin-right:0px;
+    width: 60%;
+    height: auto;
+`
+
+const ImageRight = styled("img")`
+    margin-left: 0px;
     margin:auto;
-    width: 100%;
+    width: 60%;
     height: auto;
 `
 
 const Credits = styled.div`
     font-family: Courier;
     font-size: 12px;
-    color: white;
-    text-align: right;
+    color: grey;
 `
 
+const Row = styled.div `
+display: flex;
+
+`
+  
+const Column1 = styled.div `
+    text-align: right;
+  flex: 30%;
+  padding: 5px;
+` 
+const Column2 = styled.div `
+
+  flex: 30%;
+  padding: 5px;
+  text-align: left;
+` 
+
 export default function SideBySideImage(props) {
+    console.log("here")
     return(
-        <Container>
-            <Image src={props.src}/>
-            <Credits>{props.caption}</Credits>
-        </Container>
+<Container>
+            <Row>
+                <Column1>
+                    <ImageLeft src={props.src1} />
+                </Column1>
+                <Column2>
+                    <ImageRight src={props.src2}  />
+                    <Credits>{props.caption}</Credits>
+                </Column2>
+            </Row>
+            
+</Container>
     )
 }
 
