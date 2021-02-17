@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import landingpage from '../images/landing.png'
 
+const mql = window.matchMedia(`(min-width: 800px)`);
 
 const LandingPageContainer = styled.div`
    height:100vh;
@@ -17,20 +18,6 @@ const BackgroundContainer = styled.div`
    background-position: center;
    background-size: cover;
    object-fit: cover;
-`
-
-const TextContainer = styled.div`
-   font-family : "Cormorant";
-   font-size : 80px;
-   text-align: center;
-   align-self:center;
-   color: white;
-   padding-bottom: 0.7em;
-   position: absolute;
-   top: 45%;
-   left: 50%;
-   transform: translate(-50%, -40%);
-   line-height: 90px;
 `
 const Credits = styled.div`
     font-family : "courier","Roboto";
@@ -52,8 +39,32 @@ export default function LandingPage(props) {
        
       <LandingPageContainer>
          <BackgroundContainer />
-         <TextContainer>Who Really Runs Westwood?</TextContainer>
-         <Credits>BY ZINNA FINN</Credits>
+         <div style={{
+               "font-family" : "Cormorant",
+               "font-size" : mql.matches ? "80px" : "50px",
+               "text-align": "center",
+               "align-self":"center",
+               "color": "white",
+               "padding-bottom": "0.7em",
+               "position": "absolute",
+               "top": "45%",
+               "left": "50%",
+               "transform": "translate(-50%, -40%)",
+         }}
+         >Who Really Runs Westwood?</div>
+         <div style={{
+                "font-family" : "courier, Roboto",
+                "font-size" : mql.matches ? "31px" : "20px",
+                "text-align": "center",
+                "align-self":"center",
+                "color": "white",
+                "padding-bottom": "0.7em",
+                "position": "absolute",
+                "top": "65%",
+                "left": "50%",
+                "transform": "translate(-50%, -40%)"
+         }}>BY ZINNA FINN
+         </div>
       </LandingPageContainer>
    )
 }
