@@ -7,7 +7,7 @@ const Creds = styled.div`
     font-size: 18px;
     text-align: center;
     margin: 30px auto;
-    color: #FFFFFF;
+    color: grey;
 `
 
 export default function CredsUnderLanding(props){

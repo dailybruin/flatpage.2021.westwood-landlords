@@ -67,8 +67,8 @@ const Credits = styled.div`
 const BottomCreds = styled.div`
   font-family: Courier;
   font-size: 13px;
-  color: white;
-  border-top: 4px solid white;
+  color: grey;
+  border-top: 2px solid black;
   padding: 20px 0 200px 0;
   margin-top: 200px !important;;
   margin: 0 350px;
@@ -143,7 +143,7 @@ function App() {
         })
       }
       <BottomCreds>
-        Developed by Mattie Sanseverino and Denise Wang. Illustrations by Bridgette Baron. Designed by Jongho Weon.
+        Developed by Mattie Sanseverino and Denise Wang. Designed by Samantha Joseph.
       </BottomCreds>
     </div>
   );
