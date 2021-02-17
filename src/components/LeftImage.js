@@ -13,24 +13,15 @@ const Container = styled("div")`
     text-align:center;
     justify-content:center;
     margin: 20px auto;
-`
-
-const ImageContainer = styled.div `
-display: flex;
-float:right;
-width: 40%;
-font-family: Courier;
-    font-size: 12px;
-    color: grey;
+    float:right;
 `
 
 const Image = styled("img")`
-    
     /* max-width:1400px;
     max-height:1000px; */
     justify-content:center;
     margin:5px;
-    
+    width: 80%;
     height: auto;
 `
 
@@ -43,10 +34,8 @@ const Credits = styled.div`
 export default function LeftImage(props) {
     return(
         <Container>
-            <ImageContainer>
-                <Image  src={props.src}/>
-            <Credits>{props.caption}</Credits>
-            </ImageContainer>
+            <Image  src={props.src}/>
+            <Credits>{props.caption}</Credits> 
         </Container>
     )
 }

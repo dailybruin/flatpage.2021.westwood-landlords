@@ -21,16 +21,16 @@ const Image = styled("img")`
     max-height:1000px; */
     justify-content:center;
     margin:auto;
-    width: 60%;
+    width: 50%;
     height: auto;
 `
 
 const Credits = styled.div`
     font-family: Courier;
     font-size: 12px;
-    color: white;
+    color: grey;
     text-align: right;
-    margin-right: 20%
+    margin-right: 25%
 `
 
 export default function CenteredImage(props) {

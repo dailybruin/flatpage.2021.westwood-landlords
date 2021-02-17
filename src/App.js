@@ -20,10 +20,10 @@ const Paragraph = styled.div`
   font-family: Karla;
   font-weight: 300;
   font-size: 21px;
-  margin: 0 300px;
+  margin: 0 200px;
   text-align: left;
   line-height: 32px;
-  margin-bottom: 40px !important;
+  margin-bottom: 20px !important;
   ${mediaQueries.mobile}{
     margin: 0 20px;
   }
@@ -123,11 +123,11 @@ function App() {
               <FullImage src={block.image_link} caption={block.image_credits}/>
             )
           } else if (block.type == "side-by-side-images") {
-            console.log(block);
             return (
             <SideBySideImage src1={block.image_link1} src2={block.image_link2} caption={block.image_credits} />
             )
           } else if (block.type == "centered-image") {
+            console.log("centered");
             return (
             <CenteredImage src={block.image_link} caption={block.image_credits} />
             )

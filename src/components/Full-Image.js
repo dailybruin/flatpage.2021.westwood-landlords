@@ -29,7 +29,7 @@ const Image = styled("img")`
 const Credits = styled.div`
     font-family: Courier;
     font-size: 12px;
-    color: white;
+    color: grey;
     text-align: right;
 `
 
