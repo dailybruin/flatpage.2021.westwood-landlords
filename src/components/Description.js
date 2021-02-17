@@ -1,21 +1,7 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 
-const DescriptionText = styled.div`
-    font-family: "Karla";
-    font-size : 33px;
-    text-align: center;
-    align-self:center;
-    color: black;
-    padding-bottom: 0.7em;
-    position: absolute;
-    top: 145%;
-    left: 50%;
-    transform: translate(-50%, -40%);
-    line-height: 40px;
-    
-
-`
+const mql = window.matchMedia(`(min-width: 800px)`);
 
 const LandingPageContainer = styled.div`
    height:100vh;
@@ -37,7 +23,21 @@ export default function Description(props) {
         <>
        <LandingPageContainer>
            <BackgroundContainer>
-               <DescriptionText>COVID-19 brought out the worst in Westwood landlords. But living in Westwood has always been a struggle of predatory landlords and ramshackle apartments.</DescriptionText>
+               <div style={{
+               "font-family": "Karla",
+               "font-size" : mql.matches ? '33px' : '21px',
+               "text-align": "center",
+               "align-self":"center",
+               "color": "black",
+               "padding-bottom": "0.7em",
+               "position": "absolute",
+               "top": "145%",
+               "left": "50%",
+               "transform": "translate(-50%, -40%)",
+               "line-height": "40px",
+               }}>
+                  COVID-19 brought out the worst in Westwood landlords. But living in Westwood has always been a struggle of predatory landlords and ramshackle apartments.
+               </div>
             </BackgroundContainer>
        </LandingPageContainer>
        </>
