@@ -31,6 +31,25 @@ const Paragraph = styled.div`
     margin: 0 40px;
   }
 `
+const Intro = styled.div`
+font-family: Karla;
+font-weight: 300;
+font-size: 57px;
+margin-left: 400px;
+margin-right: 200px;
+margin-bottom: 200px;
+text-align: right;
+margin-bottom: 20px !important;
+${mediaQueries.mobile}{
+  margin: 0 20px;
+  font-size: 40px;
+}
+${mediaQueries.tablet}{
+  margin: 0 40px;
+  font-size: 50px;
+}
+`
+
 
 const Note = styled.div`
   font-family: Merriweather;
@@ -117,6 +136,10 @@ function App() {
           if (block.type == "paragraph") {
             return (
               <Paragraph >{block.content}</Paragraph>
+            )
+          } else if (block.type == "intro-paragraph") {
+            return (
+              <Intro>{block.content}</Intro>
             )
           } else if (block.type === "full-image") {
             return(

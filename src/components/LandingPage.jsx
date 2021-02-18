@@ -41,15 +41,16 @@ export default function LandingPage(props) {
          <BackgroundContainer />
          <div style={{
                "font-family" : "Cormorant",
-               "font-size" : mql.matches ? "80px" : "50px",
+               "font-size" : mql.matches ? "70px" : "50px",
                "text-align": "center",
                "align-self":"center",
                "color": "white",
                "padding-bottom": "0.7em",
                "position": "absolute",
-               "top": "45%",
+               "top": "35%",
                "left": "50%",
                "transform": "translate(-50%, -40%)",
+               "line-height":"15px;"
          }}
          >Who Really Runs Westwood?</div>
          <div style={{
@@ -60,7 +61,7 @@ export default function LandingPage(props) {
                 "color": "white",
                 "padding-bottom": "0.7em",
                 "position": "absolute",
-                "top": "65%",
+                "top": "68%",
                 "left": "50%",
                 "transform": "translate(-50%, -40%)"
          }}>BY ZINNA FINN
